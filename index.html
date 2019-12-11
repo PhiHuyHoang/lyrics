@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Fresh Prince of Emoji</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js'></script>
+<script src='https://unpkg.com/react-motion/build/react-motion.js'></script>
+<script src='https://twemoji.maxcdn.com/2/twemoji.min.js?2.2.3'></script><script  src="./script.js"></script>
+<script>
+let media = 'background.mp3';
+var flag = false;
+
+document.addEventListener("click", function(){
+  
+  //if (!flag) {
+  console.log('a');
+    var playPromise = new Audio(media).play();
+    if (playPromise !== null){
+      playPromise.catch(() => { new Audio(media).play(); })
+  }
+    //new Audio(media).play();
+  console.log('b');
+    flag = true;
+  //}
+});
+</script>
+
+</body>
+</html>
